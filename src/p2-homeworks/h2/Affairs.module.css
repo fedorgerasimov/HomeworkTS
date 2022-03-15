@@ -1,3 +1,8 @@
-.someClass {
-
+.affair {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    padding: 10px;
+    margin-left: 5px;
+    background-color:#bbdcee;
 }
