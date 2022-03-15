@@ -1,3 +1,33 @@
+.wrapper {
+    display: flex;
+    align-items: flex-end;
+    max-width: 370px;
+    background-color:#cce4ff;
+    margin: 5px;
+}
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.name {
+    color: blueviolet;
+    font-weight: bold;
+    font-size: 15px;
+}
+.text {
+    color:#cfd15f;
+    font-size: 15px;
+    word-wrap: break-word;
+}
+.time {
+    display: flex;
+    justify-content: flex-end;
+    opacity: 50%;
+}
 .message {
-
+    padding: 10px;
+    border: solid blue;
+    border-radius: 10px;
+    background-color: #85958a;
 }
