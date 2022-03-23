@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
+import React, {ChangeEvent, useState, KeyboardEvent} from 'react'
 import Greeting from './Greeting'
+import {UserType} from "./HW3";
 
 type GreetingContainerPropsType = {
-    users: any // need to fix any
-    addUserCallback: any // need to fix any
+    users: Array<UserType> // need to fix any
+    addUserCallback: (name: string) => void // need to fix any
 }
 
 // более простой и понятный для новичков
@@ -12,17 +13,32 @@ type GreetingContainerPropsType = {
 // более современный и удобный для про :)
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
-    const [name, setName] = useState<any>('') // need to fix any
-    const [error, setError] = useState<any>('') // need to fix any
+    const [name, setName] = useState<string>('') // need to fix any хранить значение input (имя которое вводим) нужно в useState
+    const [error, setError] = useState<string>('') // need to fix any сохраняется ошибка
 
-    const setNameCallback = (e: any) => { // need to fix any
-        setName('') // need to fix
-    }
-    const addUser = () => {
-        alert(`Hello  !`) // need to fix
+    const setNameCallback = (event: ChangeEvent<HTMLInputElement>) => { // need to fix any если имя true, добавляем. Если false должна быть ошибка
+       if (event.currentTarget.value.trim()) {
+           setName(event.currentTarget.value.trim())      // Todolist 4
+       }else {
+           setError('Name is required')
+       }
     }
 
-    const totalUsers = 0 // need to fix
+    const addUserOnKeyPress = (event:KeyboardEvent<HTMLInputElement>) => {
+        if(event.key ==='Enter') {
+            addUserCallback(name)
+            setName('')
+            alert(`Hello ${name}!`)
+        }
+    }
+
+    const addUser = () => {   //  == button onClick
+        addUserCallback(name)
+        setName('')
+        alert(`Hello ${name}!`)
+    }
+
+    const totalUsers = users.length // need to fix
 
     return (
         <Greeting
@@ -31,6 +47,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            addUserOnKeyPress={addUserOnKeyPress}
         />
     )
 }
