@@ -1,5 +1,5 @@
 import React, {ChangeEvent, useState, KeyboardEvent} from 'react'
-import Greeting from './Greeting'
+import {Greeting} from './Greeting'
 import {UserType} from "./HW3";
 
 type GreetingContainerPropsType = {
@@ -17,25 +17,32 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [error, setError] = useState<string>('') // need to fix any сохраняется ошибка
 
     const setNameCallback = (event: ChangeEvent<HTMLInputElement>) => { // need to fix any если имя true, добавляем. Если false должна быть ошибка
-       if (event.currentTarget.value.trim()) {
-           setName(event.currentTarget.value.trim())      // Todolist 4
-       }else {
-           setError('Name is required')
-       }
+        if (event.currentTarget.value.trim()) {
+            setName(event.currentTarget.value.trim())   // Todolist 4
+            setError('')   //  удаляется ошибка после ввода в input
+        } else {
+            setError('Name is required')
+        }
     }
 
-    const addUserOnKeyPress = (event:KeyboardEvent<HTMLInputElement>) => {
-        if(event.key ==='Enter') {
+    const addUser = () => {   //  == button onClick
+        if (name === '') {   // нельзя вызвать alert, если пустой input
+            return
+        } else {
             addUserCallback(name)
             setName('')
             alert(`Hello ${name}!`)
         }
     }
 
-    const addUser = () => {   //  == button onClick
-        addUserCallback(name)
-        setName('')
-        alert(`Hello ${name}!`)
+    const addUserOnKeyPress = (event: KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter' && name) {
+            addUser()
+        }
+        /* addUserCallback(name)
+         setName('')
+         alert(`Hello ${name}!`)
+     }*/
     }
 
     const totalUsers = users.length // need to fix
