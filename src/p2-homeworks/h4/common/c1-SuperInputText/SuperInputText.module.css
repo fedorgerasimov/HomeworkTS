@@ -1,12 +1,23 @@
-.superInput {
+.input:focus {
+    outline: none;   /*не было стандартной обводки*/
+    boreder: 3px solid #7a1f78;
+}
 
+.superInput {
+    margin: 10px;
+    background: lightgrey;
+    color:#2b3236;
 }
 
 .errorInput {
-    border: 3px solid lime;
-    background: red;
+    margin: 10px;
+    border: 2px solid darkred;
+    background:lightgrey;
+    color:  #2b3236
 }
 
 .error {
-    color: red;
+    color: darkred;
+    height: 20px;
+    margin-left: 10px;
 }
