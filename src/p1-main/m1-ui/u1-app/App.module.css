@@ -3,6 +3,7 @@
 }
 
 body {
-    background: lightslategrey;
-;
+    background: rgba(212, 215, 217, 0.34);
+    margin-left: 10px;
+    margin-top: 10px;
 }
