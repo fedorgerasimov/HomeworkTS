@@ -2,32 +2,50 @@
     display: flex;
     align-items: flex-end;
     max-width: 370px;
-    background-color:#cce4ff;
+    background-color: #cce4ff;
     margin: 5px;
 }
+
 .avatar {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
+
 .name {
     color: blueviolet;
     font-weight: bold;
     font-size: 15px;
 }
+
 .text {
-    color:#cfd15f;
+    color: #cfd15f;
     font-size: 15px;
     word-wrap: break-word;
 }
+
 .time {
     display: flex;
     justify-content: flex-end;
     opacity: 50%;
 }
+
 .message {
+    position: relative;
     padding: 10px;
-    border: solid blue;
-    border-radius: 10px;
+    margin: 10px 10px 10px 20px;
+    border-radius: 10px 10px 10px 0;
     background-color: #85958a;
+}
+
+/*https://qna.habr.com/q/956679*/
+.message::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(60px at top left, transparent 49%, #85958a 51%) no-repeat right bottom;
 }
