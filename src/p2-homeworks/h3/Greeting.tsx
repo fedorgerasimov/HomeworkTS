@@ -24,7 +24,7 @@ export const Greeting: React.FC<GreetingPropsType> = (
                       onKeyPress={addUserOnKeyPress}/>
                 <div className={s.error}>{error}</div>
             </div>
-            <button onClick={addUser}>add</button>
+            <button className={s.btn} onClick={addUser}>add</button>
             <span>{totalUsers}</span>
 
         </div>
