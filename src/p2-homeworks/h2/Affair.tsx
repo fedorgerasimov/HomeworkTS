@@ -14,9 +14,11 @@ function Affair(props: AffairPropsType) {
     return (
         <div className={s.affair}>
             {/*show some text - указать название дела и его приоритет*/}
-            <div>{props.affair.name}</div>
-            <div>{props.affair.priority}</div>
-            <button onClick={deleteCallback} >x</button>
+            <div className={s.name}>{props.affair.name}</div>
+            <div className={s.priority}>{props.affair.priority}</div>
+            <div>
+                <button onClick={deleteCallback}>x</button>
+            </div>
         </div>
     )
 }

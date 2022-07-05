@@ -39,10 +39,12 @@ function Affairs(props: AffairsPropsType) {
 
             {mappedAffairs}
 
-            <button onClick={setAll} >All</button>
-            <button onClick={setHigh}>High</button>
-            <button onClick={setMiddle}>Middle</button>
-            <button onClick={()=>filterHandler('low') }>Low</button>
+            <div  className={s.container}>
+                <button className={s.btn} onClick={setAll}>All</button>
+                <button className={s.btn} onClick={setHigh}>High</button>
+                <button className={s.btn} onClick={setMiddle}>Middle</button>
+                <button className={s.btn} onClick={() => filterHandler('low')}>Low</button>
+            </div>
         </div>
     )
 }
