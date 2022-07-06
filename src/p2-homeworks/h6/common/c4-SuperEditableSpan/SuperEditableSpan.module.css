@@ -1,7 +1,7 @@
 .spanClassName {
     display: inline-block;
-    height: 32px;
-    padding-top: 10px;
+    height:40px;
     cursor: pointer;
     color: blueviolet;
+    margin:10px 10px 10px 10px;
 }
