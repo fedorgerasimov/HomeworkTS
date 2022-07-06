@@ -1,0 +1,28 @@
+.select {
+    width: 240px;
+    padding: 5px 15px 5px 10px;
+    cursor: pointer;
+    appearance: none;
+    text-align: center;
+
+    background-image: url("./icons8-coffee-50.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 3px) center;
+    background-size: 20px;
+
+    border: #deb85e solid 2px;
+    background-color: #dadc90;
+
+}
+.select:focus {
+    outline: none;
+    border: #b65d2d solid 2px;
+}
+.option {
+    color: #b65d2d;
+    background-color: #bdd33b;
+}
+.option:checked{
+    color: #bdd33b;
+    background-color:#b65d2d;
+}
