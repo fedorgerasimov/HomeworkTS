@@ -1,6 +1,6 @@
 .input:focus {
     outline: none;   /*не было стандартной обводки*/
-    boreder: 3px solid #7a1f78;
+    border: 2px solid #093386;
 }
 
 .superInput {
@@ -18,6 +18,8 @@
 
 .error {
     color: darkred;
-    height: 20px;
     margin-left: 10px;
+}
+.errorBorderSize {
+    height: 18px;
 }

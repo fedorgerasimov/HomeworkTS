@@ -14,6 +14,7 @@ function HW4() {
         } else {
             alert(text) // если нет ошибки показать текст
         }
+        setText('')
     }
 
     const [checked, setChecked] = useState<boolean>(false)
