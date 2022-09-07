@@ -6,16 +6,8 @@ function HW9() {
         <div>
             <hr/>
             homeworks 9
-
-            {/*should work (должно работать)*/}
             <Clock/>
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeClock/>*/}
-            <hr/>
         </div>
     )
 }
-
 export default HW9
