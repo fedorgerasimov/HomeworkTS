@@ -9,9 +9,9 @@ function HW10() {
     const dispatch = useDispatch()
 
     const setLoading = () => {
-        dispatch(loadingAC(true))
+        dispatch(loadingAC(true))  // loadingAC(!isLoading))
         setTimeout(()=> {
-           dispatch( loadingAC(false))
+           dispatch( loadingAC(false))  // loadingAC(isLoading))
         }, 2000)
         //console.log('loading...')
     };
