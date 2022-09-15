@@ -9,6 +9,7 @@
 /coverage
 
 /src/p2-homeworks/h11/solutionsWithCSS
+/src/p2-homeworks/h11/MUI_Solutions.tsx
 
 # production
 /build

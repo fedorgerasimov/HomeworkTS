@@ -24,6 +24,7 @@ const SuperDoubleRange = ({onChangeRange, value, minValue, maxValue, disabled}: 
                 max={maxValue ? maxValue : 100}
                 disabled={disabled}
                 track={false}
+                disableSwap
                 sx={{
                     width: 300,
                     color: 'darkgoldenrod',
