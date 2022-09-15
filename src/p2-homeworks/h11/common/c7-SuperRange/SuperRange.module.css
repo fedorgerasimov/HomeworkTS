@@ -1,3 +1,13 @@
-.range {
+.container {
+    display: flex;
+    flex-direction: row;
 
+}
+
+.value {
+    margin: 2px 15px 0px 0px;
+     width: 25px;
+}
+.value2 {
+    margin: 2px 0px 0px 10px;
 }

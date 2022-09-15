@@ -8,6 +8,8 @@
 # testing
 /coverage
 
+/src/p2-homeworks/h11/solutionsWithCSS
+
 # production
 /build
 
